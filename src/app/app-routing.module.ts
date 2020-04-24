@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', component: IntroComponent},
   { path: 'filter', component: FilterComponent},
   { path: 'filter-save', component: FilterComponent},
-  { path: 'result/:result', component: ResultComponent}
+  { path: 'result/:result', component: ResultComponent},
+  { path: 'lazy-module', loadChildren: () => import('./lazy-module/lazy-module.module').then(m => m.LazyModuleModule) }
 ];
 
 @NgModule({
